@@ -46,7 +46,7 @@ https://github.com/thecodeholic/laravel11-crash-course/blob/main/resources/css/a
 }
 .note {
     background-color: #f0c806;
-    border-radius: 8px;
+    border-radius: 18px;
     width: 280px;
     margin: 0 10px 20px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);

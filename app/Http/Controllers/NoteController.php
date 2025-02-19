@@ -14,7 +14,7 @@ class NoteController extends Controller
     {
         // $notes = Note::query()->orderBy('created_at', 'desc')->get();
         $notes = Note::query()->orderBy('created_at', 'desc')->paginate(10);
-        // dd($notes);
+        // dd($notes); // Data dump
         return view('note.index', ['notes' => $notes]);
     }
 
