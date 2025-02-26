@@ -4,8 +4,14 @@ use App\Http\Controllers\NoteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+
+
 // Hack: Laravel/Breeze expects a 'dashboard' route.
-Route::redirect('/', '/note')->name('dashboard');
+// Route::redirect('/', '/note')->name('dashboard');
+
+Route::get("/dashboard", function () {
+    return view("dashboard");
+})->middleware(["auth", "verified"])->name("dashboard");
 
 Route::middleware(['auth', 'verified'])->group(function () {
     // Route::get("/note", [NoteController::class, 'index'])->name("note.index");
